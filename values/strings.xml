@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CommandeEnLigne</string>
+    <string name="bt_blth_on_off">Activer/Désactiver Bluetooth</string>
+    <string name="bt_blth_discoverable">Rendre détectable pendant 2min</string>
+    <string name="bt_blth_discover">Détecter les appareils disponibles</string>
+    <string name="bt_blth_chosen">Connecter à l\'appareil sélectionné</string>
+    <string name="blth_state_off">Bluetooth désactivé.</string>
+    <string name="blth_state_on">Bluetooth activé.</string>
+    <string name="blth_scan_discoverable">Appareil détectable.</string>
+    <string name="blth_scan_connectable">Appareil non détectable. Connection possible.</string>
+    <string name="blth_scan_not_connectable">Appareil non détectable. Connection impossible.</string>
+    <string name="blth_state_connecting">Appareil en cours de connexion.</string>
+    <string name="blth_state_connected">Appareil connecté.</string>
+    <string name="blth_not_supported">Bluetooth non disponible sur cet appareil.</string>
+    <string name="book_name">Titre du livre</string>
+    <string name="book_price">0€</string>
+    <string name="commande_username">Nom du client</string>
+    <string name="commande_nbItems">Nombre de livres commandés</string>
+    <string name="commande_stateTodo">Non traité</string>
+    <string name="blth_msg_received" />
+    <string name="commande_number">2</string>
+    <string name="order">1</string>
+    <string name="commande_stateDoing">En cours</string>
+    <string name="commande_stateDone">Traité</string>
+</resources>
