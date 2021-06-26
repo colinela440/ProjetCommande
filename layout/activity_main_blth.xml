@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>          <!--Gestion Bluetooth-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivityBlth">
+
+    <TableRow
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@id/btBlthOnOff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="3"
+            android:background="@android:color/holo_green_light"
+            app:srcCompat="@mipmap/liroy_merlin" />
+
+        <TextView
+            android:id="@+id/titre_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Réglages Bluetooth"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btBlthOnOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/bt_blth_on_off"
+        app:layout_constraintBottom_toTopOf="@id/txtOnOff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <TextView
+        android:id="@+id/txtOnOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/btBlthDiscoverable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btBlthOnOff" />
+
+    <Button
+        android:id="@+id/btBlthDiscoverable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="btDiscoverable"
+        android:text="@string/bt_blth_discoverable"
+        app:layout_constraintBottom_toTopOf="@id/txtDiscoverable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtOnOff" />
+
+    <TextView
+        android:id="@+id/txtDiscoverable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/btBlthDiscover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btBlthDiscoverable" />
+
+    <Button
+        android:id="@+id/btBlthDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="btDiscover"
+        android:text="@string/bt_blth_discover"
+        app:layout_constraintBottom_toTopOf="@id/lvDiscover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDiscoverable" />
+
+    <ListView
+        android:id="@+id/lvDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/txtBlthChosen"
+        app:layout_constraintHeight_min="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btBlthDiscover" />
+
+    <TextView
+        android:id="@+id/txtBlthChosen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/holo_green_light"
+        android:padding="10dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/btBlthStartConnection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lvDiscover" />
+
+    <Button
+        android:id="@+id/btBlthStartConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:enabled="true"
+        android:onClick="btDiscover"
+        android:text="Lancer la liaison"
+        app:layout_constraintBottom_toTopOf="@id/send_text_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBlthChosen" />
+
+    <TableRow
+        android:id="@+id/send_text_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btBlthStartConnection">
+
+        <EditText
+            android:id="@+id/etxtBlthSendText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:hint="Enter Text Here"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btBlthSendText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:text="Send" />
+    </TableRow>
+
+<!--    <TableRow
+        android:id="@+id/read_msg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/send_text_bar">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="Msg reçu :"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtMsgIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/blth_msg_received" />
+    </TableRow>
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>
